@@ -45,12 +45,20 @@ namespace Data_Structures_And_Algorithms
 
         private void BtnPlay_Click(object sender, EventArgs e)
         {
+            if(textboxMax.TextLength >0 && textboxMın.TextLength>0)
+            {
+
             max = Convert.ToInt16(textboxMax.Text);
             min = Convert.ToInt16(textboxMın.Text);
 
             mid = Guess(min,max);
             calc++;
             lblMyGuess.Text = "My Guess is: "+mid.ToString();
+            }
+            else
+            {
+                MessageBox.Show("You need to give two number");
+            }
             
             
         }
