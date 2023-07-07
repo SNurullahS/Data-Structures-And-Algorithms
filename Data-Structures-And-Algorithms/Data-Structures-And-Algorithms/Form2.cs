@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Data_Structures_And_Algorithms
 {
-    public partial class WorkSpace : Form
+    public partial class Form2 : Form
     {
-        public WorkSpace()
+        public Form2()
         {
             InitializeComponent();
         }
