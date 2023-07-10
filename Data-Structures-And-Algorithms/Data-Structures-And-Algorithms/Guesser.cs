@@ -77,13 +77,26 @@ namespace Data_Structures_And_Algorithms
 
         public int Factorial(int number)
         {
-            int answer = 1;
-            for (int i= 1; i <= number; i++)
+            if (number == 0 || number == 1)
             {
-                answer = i*answer;
+                return 1;
+            }
+            else
+            {
+                return (number * Factorial(number - 1));
             }
 
-            return answer;
+
+
+
+            // __________________
+            //int answer = 1;
+            //for (int i= 1; i <= number; i++)
+            //{
+            //    answer = i*answer;
+            //}
+
+            //return answer;
         }
 
         public void Replay()
