@@ -41,10 +41,13 @@ namespace Data_Structures_And_Algorithms
         private void BtnCorrect_Click(object sender, EventArgs e)
         {
             lblMyGuess.Text = "Yey your number is: " + mid.ToString() +"\n Process steps : "+calc;
+            LblFac.Text = Factorial(calc).ToString();  
         }
 
         private void BtnPlay_Click(object sender, EventArgs e)
         {
+
+            Replay();
             if(textboxMax.TextLength >0 && textboxMın.TextLength>0)
             {
 
@@ -65,6 +68,29 @@ namespace Data_Structures_And_Algorithms
         public int Guess(int MinNumber, int MaxNumber)
         {
             return MinNumber + ((MaxNumber - MinNumber) / 2);
+        }
+
+        private void WorkSpace_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        public int Factorial(int number)
+        {
+            int answer = 1;
+            for (int i= 1; i <= number; i++)
+            {
+                answer = i*answer;
+            }
+
+            return answer;
+        }
+
+        public void Replay()
+        {
+            lblMyGuess.Text = "My guess";
+            LblFac.Text = "";
+            calc = 0;
         }
     }
 }

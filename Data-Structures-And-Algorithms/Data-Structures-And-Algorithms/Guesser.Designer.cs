@@ -38,6 +38,8 @@
             this.lblMyGuess = new System.Windows.Forms.Label();
             this.BtnHigher = new System.Windows.Forms.Button();
             this.BtnCorrect = new System.Windows.Forms.Button();
+            this.LblFac = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -105,7 +107,7 @@
             this.BtnLower.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(19)))), ((int)(((byte)(85)))));
             this.BtnLower.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnLower.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnLower.Location = new System.Drawing.Point(209, 280);
+            this.BtnLower.Location = new System.Drawing.Point(198, 301);
             this.BtnLower.Name = "BtnLower";
             this.BtnLower.Size = new System.Drawing.Size(81, 44);
             this.BtnLower.TabIndex = 6;
@@ -116,7 +118,7 @@
             // lblMyGuess
             // 
             this.lblMyGuess.AutoSize = true;
-            this.lblMyGuess.Location = new System.Drawing.Point(149, 208);
+            this.lblMyGuess.Location = new System.Drawing.Point(101, 187);
             this.lblMyGuess.Name = "lblMyGuess";
             this.lblMyGuess.Size = new System.Drawing.Size(88, 20);
             this.lblMyGuess.TabIndex = 4;
@@ -127,7 +129,7 @@
             this.BtnHigher.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(193)))), ((int)(((byte)(243)))));
             this.BtnHigher.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnHigher.ForeColor = System.Drawing.Color.Black;
-            this.BtnHigher.Location = new System.Drawing.Point(98, 280);
+            this.BtnHigher.Location = new System.Drawing.Point(87, 301);
             this.BtnHigher.Name = "BtnHigher";
             this.BtnHigher.Size = new System.Drawing.Size(81, 44);
             this.BtnHigher.TabIndex = 5;
@@ -140,7 +142,7 @@
             this.BtnCorrect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(232)))), ((int)(((byte)(216)))));
             this.BtnCorrect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCorrect.ForeColor = System.Drawing.Color.Black;
-            this.BtnCorrect.Location = new System.Drawing.Point(98, 343);
+            this.BtnCorrect.Location = new System.Drawing.Point(87, 364);
             this.BtnCorrect.Name = "BtnCorrect";
             this.BtnCorrect.Size = new System.Drawing.Size(192, 44);
             this.BtnCorrect.TabIndex = 7;
@@ -148,12 +150,31 @@
             this.BtnCorrect.UseVisualStyleBackColor = false;
             this.BtnCorrect.Click += new System.EventHandler(this.BtnCorrect_Click);
             // 
+            // LblFac
+            // 
+            this.LblFac.AutoSize = true;
+            this.LblFac.Location = new System.Drawing.Point(247, 252);
+            this.LblFac.Name = "LblFac";
+            this.LblFac.Size = new System.Drawing.Size(0, 20);
+            this.LblFac.TabIndex = 8;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(102, 252);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(145, 20);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Factorial of step:";
+            // 
             // WorkSpace
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(491, 429);
+            this.ClientSize = new System.Drawing.Size(405, 429);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.LblFac);
             this.Controls.Add(this.BtnCorrect);
             this.Controls.Add(this.lblMyGuess);
             this.Controls.Add(this.BtnLower);
@@ -164,6 +185,7 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "WorkSpace";
             this.Text = "Guesser";
+            this.Load += new System.EventHandler(this.WorkSpace_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -183,6 +205,8 @@
         private System.Windows.Forms.Button BtnHigher;
         private System.Windows.Forms.Button BtnPlay;
         private System.Windows.Forms.Button BtnCorrect;
+        private System.Windows.Forms.Label LblFac;
+        private System.Windows.Forms.Label label3;
     }
 }
 
