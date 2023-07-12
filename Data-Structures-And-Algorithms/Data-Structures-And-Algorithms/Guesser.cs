@@ -21,7 +21,7 @@ namespace Data_Structures_And_Algorithms
         private void BtnHigher_Click(object sender, EventArgs e)
         {
             min = mid;
-            mid = Guess(mid, max);
+            mid = GMethods.Guess(mid, max);
             calc++;
             lblMyGuess.Text = "My Guess is: " + mid.ToString();
         }
@@ -34,7 +34,7 @@ namespace Data_Structures_And_Algorithms
         private void BtnLower_Click(object sender, EventArgs e)
         {
             max = mid;
-            mid = Guess(min, mid);
+            mid = GMethods.Guess(min, mid);
             calc++;
             lblMyGuess.Text = "My Guess is: " + mid.ToString();
         }
@@ -55,7 +55,7 @@ namespace Data_Structures_And_Algorithms
             max = Convert.ToInt16(textboxMax.Text);
             min = Convert.ToInt16(textboxMın.Text);
 
-            mid = Guess(min,max);
+            mid = GMethods.Guess(min,max);
             calc++;
             lblMyGuess.Text = "My Guess is: "+mid.ToString();
             }
@@ -66,37 +66,6 @@ namespace Data_Structures_And_Algorithms
             
             
         }
-        public int Guess(int MinNumber, int MaxNumber)
-        {
-            return MinNumber + ((MaxNumber - MinNumber) / 2);
-        }
-
-        private void WorkSpace_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        //public int Factorial(int number)
-        //{
-        //    if (number == 0 || number == 1)
-        //    {
-        //        return 1;
-        //    }
-        //    else
-        //    {
-        //        return (number * Factorial(number - 1));
-        //    }
-
-        //    // _________________________________
-        //    //int answer = 1;
-        //    //for (int i= 1; i <= number; i++)
-        //    //{
-        //    //    answer = i*answer;
-        //    //}
-
-        //    //return answer;
-        //}
-
         public void Replay()
         {
             lblMyGuess.Text = "My guess";

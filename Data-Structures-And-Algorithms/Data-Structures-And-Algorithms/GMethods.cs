@@ -20,5 +20,11 @@ namespace Data_Structures_And_Algorithms
                 return (number * Factorial(number - 1));
             }
         }
+
+        public int Guess(int MinNumber, int MaxNumber)
+        {
+            return MinNumber + ((MaxNumber - MinNumber) / 2);
+        }
+
     }
 }

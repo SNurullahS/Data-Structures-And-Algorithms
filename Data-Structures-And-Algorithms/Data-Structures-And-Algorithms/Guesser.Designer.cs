@@ -185,7 +185,7 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "WorkSpace";
             this.Text = "Guesser";
-            this.Load += new System.EventHandler(this.WorkSpace_Load);
+        //    this.Load += new System.EventHandler(this.WorkSpace_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

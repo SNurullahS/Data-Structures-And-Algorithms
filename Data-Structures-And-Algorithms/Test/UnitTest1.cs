@@ -7,10 +7,11 @@ namespace Test
     [TestClass]
     public class UnitTest1
     {
+         GMethods gMethods = new GMethods();
+       
         [TestMethod]
         public void Factorial_ReturnsCorrectResult()
         {
-            GMethods gMethods = new GMethods();
             // Arrange
             int number = 5;
             int expectedFactorial = 120;
@@ -22,5 +23,19 @@ namespace Test
             Assert.AreEqual(expectedFactorial, result);
         }
 
+        [TestMethod]
+        public void Guess_ReturnsMiddleNumber()
+        {
+            // Arrange
+            int minNumber = 1;
+            int maxNumber = 10;
+            int expectedGuess = 5;
+
+            // Act
+            int result = gMethods.Guess(minNumber, maxNumber);
+
+            // Assert
+            Assert.AreEqual(expectedGuess, result);
+        }
     }
 }
