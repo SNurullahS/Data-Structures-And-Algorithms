@@ -15,6 +15,7 @@ namespace Data_Structures_And_Algorithms
     {
         int max, min, mid;
         int calc = 0;
+        GMethods GMethods = new GMethods();
 
 
         private void BtnHigher_Click(object sender, EventArgs e)
@@ -41,7 +42,7 @@ namespace Data_Structures_And_Algorithms
         private void BtnCorrect_Click(object sender, EventArgs e)
         {
             lblMyGuess.Text = "Yey your number is: " + mid.ToString() +"\n Process steps : "+calc;
-            LblFac.Text = Factorial(calc).ToString();  
+            LblFac.Text = GMethods.Factorial(calc).ToString();  
         }
 
         private void BtnPlay_Click(object sender, EventArgs e)
@@ -75,29 +76,26 @@ namespace Data_Structures_And_Algorithms
 
         }
 
-        public int Factorial(int number)
-        {
-            if (number == 0 || number == 1)
-            {
-                return 1;
-            }
-            else
-            {
-                return (number * Factorial(number - 1));
-            }
+        //public int Factorial(int number)
+        //{
+        //    if (number == 0 || number == 1)
+        //    {
+        //        return 1;
+        //    }
+        //    else
+        //    {
+        //        return (number * Factorial(number - 1));
+        //    }
 
+        //    // _________________________________
+        //    //int answer = 1;
+        //    //for (int i= 1; i <= number; i++)
+        //    //{
+        //    //    answer = i*answer;
+        //    //}
 
-
-
-            // __________________
-            //int answer = 1;
-            //for (int i= 1; i <= number; i++)
-            //{
-            //    answer = i*answer;
-            //}
-
-            //return answer;
-        }
+        //    //return answer;
+        //}
 
         public void Replay()
         {

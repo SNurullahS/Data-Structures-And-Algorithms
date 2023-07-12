@@ -153,7 +153,7 @@
             // LblFac
             // 
             this.LblFac.AutoSize = true;
-            this.LblFac.Location = new System.Drawing.Point(247, 252);
+            this.LblFac.Location = new System.Drawing.Point(247, 236);
             this.LblFac.Name = "LblFac";
             this.LblFac.Size = new System.Drawing.Size(0, 20);
             this.LblFac.TabIndex = 8;
