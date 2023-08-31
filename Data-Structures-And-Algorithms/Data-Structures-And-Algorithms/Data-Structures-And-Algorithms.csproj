@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\DublicateSolver.cs" />
     <Compile Include="NumGuesser\GMethods.cs" />
     <Compile Include="NumGuesser\Guesser.cs">
       <SubType>Form</SubType>

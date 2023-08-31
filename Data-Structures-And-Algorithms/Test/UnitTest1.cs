@@ -1,5 +1,6 @@
 ﻿using System;
 using Data_Structures_And_Algorithms;
+using Data_Structures_And_Algorithms.Classes;
 using Microsoft.VisualStudio.TestTools.UnitTesting;  
 
 namespace Test
@@ -8,7 +9,8 @@ namespace Test
     public class UnitTest1
     {
          GMethods gMethods = new GMethods();
-       
+        DublicateSolver Ds = new DublicateSolver();
+
         [TestMethod]
         public void Factorial_ReturnsCorrectResult()
         {
@@ -36,6 +38,23 @@ namespace Test
 
             // Assert
             Assert.AreEqual(expectedGuess, result);
+        }
+
+
+        [TestMethod]
+        public void TestIsDuplicateWithDuplicates()
+        {
+            int[] duplicates = { 1, 2, 2, 3, 4, 4, 5 };
+            bool result = Ds.isDuplicate(duplicates);
+            Assert.IsTrue(result);
+        }
+
+        [TestMethod]
+        public void TestIsDuplicateWithoutDuplicates()
+        {
+            int[] noDuplicates = { 1, 2, 3, 4, 5 };
+            bool result = Ds.isDuplicate(noDuplicates);
+            Assert.IsFalse(result);
         }
     }
 }
