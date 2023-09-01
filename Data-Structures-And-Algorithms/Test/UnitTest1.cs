@@ -10,7 +10,7 @@ namespace Test
     {
          GMethods gMethods = new GMethods();
         DublicateSolver Ds = new DublicateSolver();
-
+        SingleNumber SN = new SingleNumber();   
         [TestMethod]
         public void Factorial_ReturnsCorrectResult()
         {
@@ -56,5 +56,37 @@ namespace Test
             bool result = Ds.isDuplicate(noDuplicates);
             Assert.IsFalse(result);
         }
+
+        [TestMethod]
+        public void TestFindUniqueNumberWithDuplicates()
+        {
+            int[] numbers = { 1, 2, 2, 3, 3, 4, 4 };
+
+            int uniqueNumber = SN.FindUniqueNumber(numbers);
+
+            Assert.AreEqual(1, uniqueNumber);
+        }
+
+        [TestMethod]
+        public void STestFindUniqueNumberWithDuplicates()
+        {
+            int[] numbers = { 1, 2, 2, 3, 3, 4, 4 };
+
+            int uniqueNumber = SN.FindUniqueNumber(numbers);
+
+            Assert.AreEqual(1, uniqueNumber);
+        }
+
+        [TestMethod]
+        public void TestFindUniqueNumberWithoutDuplicates()
+        {
+            int[] numbers = { 1, 2, 3, 4, 5 };
+
+            int uniqueNumber = SN.FindUniqueNumber(numbers);
+
+            Assert.AreEqual(1, uniqueNumber);
+        }
+
+
     }
 }
